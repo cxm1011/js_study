@@ -31,3 +31,35 @@ var fruitbear2 = fruit2;  // assign fruit object reference to fruitbear
 // here fruit and fruitbear are pointing to same object
 console.log(fruit2 == fruitbear2) // return true
 console.log(fruit2 === fruitbear2) // return true
+
+var person = {
+	name: ['cxm','hc'],
+	age: [27,25],
+	address: 'pudong',
+	introduce: function(){
+		console.log(this.name[0]+': '+this.age[0]+'and'+this.name[1]+': '+this.age[1]);
+	},
+	like: {
+		one: 'a',
+		two: 'b'
+	}
+}
+
+console.log(person.name[0]);
+console.log(person.introduce);
+person.introduce();
+console.log(person.like.one)
+
+//括号表示法
+console.log(person['like']['one']);
+
+//点表示法只能接受字面量的成员的名字，不接受变量值作为名字。
+var myDataName = 'height';
+var myDataValue = '1.80m';
+person[myDataName] = myDataValue;
+console.log(person['height']);
+
+var myDataName2 = 'height2';
+var myDataValue2 = '1.80m';
+person.myDataName2 = myDataValue2;
+console.log(person.height2);  //输出undefined
