@@ -139,5 +139,15 @@ Cat.canRun(); //输出相同的this。
 //2.不能与新运算符一起使用，因此不能用作构造函数
 //3.没有原型属性 
 var foo = (name,age) =>{name = name,age=age};
-var f8 = new foo('car',11); //报错。因为尝试使用箭头函数作为构造函数
+//var f8 = new foo('car',11); //报错。因为尝试使用箭头函数作为构造函数
+
+
+//包装函数
+var a =2;
+(function foo(){ //以(function 开头，则函数会被当作表达式而不是标准的函数声明处理
+	var a =3;
+	console.log(a);
+})();  // foo只能在函数内部被访问，这样不会污染外部作用域
+console.log(a);
+
 
