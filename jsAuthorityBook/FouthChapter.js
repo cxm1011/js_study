@@ -19,3 +19,13 @@ var data = [7,8,9];
 console.log('0' in data); //true.数组包含第0个元素
 console.log('3' in data); //false
 console.log(7 in data);  //false.没有索引为7的元素
+
+//delete运算符
+var o = {x:1,y:2};
+delete o.x;
+console.log('x' in o);  //false
+
+var arr = [1,2,3];
+delete arr[2];
+console.log('2' in arr);  //false
+console.log(arr.length);  //3.数组长度没有改变
