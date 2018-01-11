@@ -6,5 +6,5 @@ for(var i in arr){
 
 var obj = {x:5,y:8};
 for(var val in obj){
-	console.log(val);   //0,1,2
+	console.log(val);   //x,y
 } 
